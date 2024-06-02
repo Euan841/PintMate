@@ -20,7 +20,7 @@ jobs:
 
     - name: Deploy to server
       run: |
-        ssh -o StrictHostKeyChecking=no user@your-production-server << 'EOF'
+        ssh -o StrictHostKeyChecking=no ubuntu@ypintmate.uk << 'EOF'
           cd PintMate
           git pull origin main
           npm run deploy
