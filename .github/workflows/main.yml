@@ -23,5 +23,6 @@ jobs:
         ssh -o StrictHostKeyChecking=no ubuntu@pintmate.uk << 'EOF'
           cd PintMate
           git pull origin main
+          npm install
           npm run deploy
         EOF
