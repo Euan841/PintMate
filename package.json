@@ -1,0 +1,31 @@
+{
+  "name": "pintmate",
+  "version": "1.0.0",
+  "description": "temp description",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "npm run serve",
+    "dev": "concurrently \"npm run build:watch\" \"npm run serve:watch\"",
+    "serve": "node dist/index.js",
+    "serve:watch": "nodemon dist/index.js",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "deploy": "npm run build && npm run serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.13.0",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mysql2": "^3.10.0"
+  }
+}
