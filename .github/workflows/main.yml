@@ -22,8 +22,7 @@ jobs:
       run: |
         ssh -o StrictHostKeyChecking=no ubuntu@pintmate.uk << 'EOF'
           cd PintMate
-          docker stop $(docker ps -q)
-          docker container prune
+          docker-compose down
           git pull origin main
           docker-compose up --build -d
         EOF
