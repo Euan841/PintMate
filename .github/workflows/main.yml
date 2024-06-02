@@ -20,6 +20,9 @@ jobs:
 
     - name: Deploy to server
       run: |
+        ssh -o StrictHostKeyChecking=no ubuntu@pintmate.uk <<'EOF'
+          killall -u ubuntu
+        EOF
         ssh -o StrictHostKeyChecking=no ubuntu@pintmate.uk << 'EOF'
           cd PintMate
           git pull origin main
