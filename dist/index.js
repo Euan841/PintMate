@@ -21,13 +21,51 @@ app.get('/', (req, res) => {
         }
     });
 });
+// Example data
+const pubs = [
+    {
+        id: 1,
+        name: "Malt Shovel",
+        coordinate: {
+            latitude: 51.064634403576925,
+            longitude: -0.331125913184682
+        },
+        visited: true,
+        imgs: ["crown-1.png", "crown-2.png"]
+    },
+    {
+        id: 2,
+        name: "The Lynd Cross",
+        coordinate: {
+            latitude: 51.063710071150595,
+            longitude: -0.3322078296009859
+        },
+        visited: false,
+        imgs: ["the-lynd-cross-1.png", "the-lynd-cross-2.png"]
+    },
+    {
+        id: 3,
+        name: "The Bear",
+        coordinate: {
+            latitude: 51.06199853684657,
+            longitude: -0.32850815009521195
+        },
+        visited: true,
+        imgs: ["the-bear-1.png", "the-bear-2.png"]
+    },
+    {
+        id: 4,
+        name: "Crown",
+        coordinate: {
+            latitude: 51.06257652002502,
+            longitude: -0.3285208182900828
+        },
+        visited: false,
+        imgs: ["crown-1.png", "crown-2.png"]
+    },
+    // Add more pubs as needed
+];
+// Define a route to return the example data
 app.get('/data', (req, res) => {
-    db_1.pool.query('SELECT * FROM test', (error, results) => {
-        if (error) {
-            res.status(500).send(error);
-        }
-        else {
-            res.json(results);
-        }
-    });
+    res.json(pubs);
 });
