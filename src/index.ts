@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
     if (error) {
       res.status(500).send(error);
     } else {
-      res.status(200).send("Hello World")
+      res.status(200).send("Hello World 2")
     }
   });
 })
