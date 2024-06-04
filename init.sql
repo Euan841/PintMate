@@ -6,7 +6,7 @@ CREATE TABLE users (
     username VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE users (
+CREATE TABLE pubs (
     id INT AUTO_INCREMENT PRIMARY KEY,
     pubName VARCHAR(50) NOT NULL,
     pubRating INT NULL,
