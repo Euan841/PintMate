@@ -94,7 +94,7 @@ interface VisitedPub {
     profilePicture: string;
   }
   pub: {
-    pubID: string;
+    pubID: number;
     pubName: string;
   }
   timestamp: string; // ISO 8601 format
@@ -130,11 +130,11 @@ interface LeftReview {
     profilePicture: string;
   }
   pub: {
-    pubID: string;
+    pubID: number;
     pubName: string;
   }
   review: {
-    userID: string;
+    userID: number;
     score: number; // Rating score (1-5)
     reviewText: string;
   };
@@ -162,7 +162,7 @@ const exampleFeed: FeedItem[] = [
       "profilePicture": "alice_pic.jpg"
     },
     "pub": {
-      "pubID": "pub001",
+      "pubID": 1,
       "pubName": "The Red Lion"
     },
     "timestamp": "2024-06-01T14:30:00Z"
@@ -195,11 +195,11 @@ const exampleFeed: FeedItem[] = [
       "profilePicture": "diana_pic.jpg"
     },
     "pub": {
-      "pubID": "pub002",
+      "pubID": 2,
       "pubName": "The King's Head"
     },
     "review": {
-      "userID": "4",
+      "userID": 4,
       "score": 5,
       "reviewText": "Great atmosphere and friendly staff!"
     },
@@ -222,7 +222,7 @@ const exampleFeed: FeedItem[] = [
       "profilePicture": "fiona_pic.jpg"
     },
     "pub": {
-      "pubID": "pub003",
+      "pubID": 3,
       "pubName": "The Crown Inn"
     },
     "timestamp": "2024-06-06T21:00:00Z"
@@ -255,11 +255,11 @@ const exampleFeed: FeedItem[] = [
       "profilePicture": "ian_pic.jpg"
     },
     "pub": {
-      "pubID": "pub004",
+      "pubID": 4,
       "pubName": "The White Horse"
     },
     "review": {
-      "userID": "9",
+      "userID": 9,
       "score": 4,
       "reviewText": "Nice place but a bit crowded."
     },
@@ -282,7 +282,7 @@ const exampleFeed: FeedItem[] = [
       "profilePicture": "karen_pic.jpg"
     },
     "pub": {
-      "pubID": "pub005",
+      "pubID": 5,
       "pubName": "The Green Dragon"
     },
     "timestamp": "2024-06-11T16:00:00Z"
@@ -315,11 +315,11 @@ const exampleFeed: FeedItem[] = [
       "profilePicture": "nina_pic.jpg"
     },
     "pub": {
-      "pubID": "pub006",
+      "pubID": 6,
       "pubName": "The Black Bull"
     },
     "review": {
-      "userID": "14",
+      "userID": 14,
       "score": 3,
       "reviewText": "Average experience, nothing special."
     },
@@ -342,7 +342,7 @@ const exampleFeed: FeedItem[] = [
       "profilePicture": "paul_pic.jpg"
     },
     "pub": {
-      "pubID": "pub007",
+      "pubID": 7,
       "pubName": "The Blue Boar"
     },
     "timestamp": "2024-06-16T21:00:00Z"
@@ -379,7 +379,7 @@ const exampleFeed: FeedItem[] = [
       "pubName": "The Silver Fox"
     },
     "review": {
-      "userID": "19",
+      "userID": 19,
       "score": 2,
       "reviewText": "Not a great experience, would not recommend."
     },
