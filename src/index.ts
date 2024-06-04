@@ -375,7 +375,7 @@ const exampleFeed: FeedItem[] = [
       "profilePicture": "sam_pic.jpg"
     },
     "pub": {
-      "pubID": "pub008",
+      "pubID": 8,
       "pubName": "The Silver Fox"
     },
     "review": {
